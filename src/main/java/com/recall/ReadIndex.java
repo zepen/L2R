@@ -1,9 +1,8 @@
-package recall;
+package com.recall;
 import java.io.IOException;
 import java.nio.file.Paths;
 
 import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.DirectoryReader;
 import org.apache.lucene.index.IndexReader;
@@ -27,7 +26,7 @@ public class ReadIndex
     private static TopDocs searchByTitle(IndexSearcher searcher) throws Exception
     {
         QueryParser qp = new QueryParser("title", new SmartChineseAnalyzer());
-        Query firstNameQuery = qp.parse("土豆");
+        Query firstNameQuery = qp.parse("小品");
         return searcher.search(firstNameQuery, 100);
     }
 

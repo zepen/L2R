@@ -1,4 +1,4 @@
-package rank;
+package com.rank;
 
 import ml.dmlc.xgboost4j.java.Booster;
 import ml.dmlc.xgboost4j.java.DMatrix;
